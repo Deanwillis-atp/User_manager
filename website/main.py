@@ -1,9 +1,16 @@
 from flask import Flask, render_template, request 
+from website import create_app
 import json
 import os 
 
 
-app = Flask(__name__)
+
+
+app = create_app()
+
+
+if __name__ 
+
 
 @app.route('/',methods =['GET','POST'])
 def home():
@@ -28,4 +35,4 @@ def home():
     
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=80)
+    app.run(debug=True)
